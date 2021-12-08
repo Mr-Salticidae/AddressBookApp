@@ -7,3 +7,4 @@ C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookA
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.csproj.CoreCompileInputs.cache
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.exe
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.pdb
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.csprojAssemblyReference.cache
