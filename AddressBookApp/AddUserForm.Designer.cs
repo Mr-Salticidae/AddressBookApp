@@ -36,6 +36,8 @@
             this.txt_AddRepeatPassword = new System.Windows.Forms.TextBox();
             this.btn_AddUser = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_GoBack = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -90,15 +92,18 @@
             // 
             // btn_AddUser
             // 
-            this.btn_AddUser.Location = new System.Drawing.Point(229, 274);
+            this.btn_AddUser.Location = new System.Drawing.Point(61, 158);
             this.btn_AddUser.Name = "btn_AddUser";
-            this.btn_AddUser.Size = new System.Drawing.Size(104, 23);
+            this.btn_AddUser.Size = new System.Drawing.Size(80, 31);
             this.btn_AddUser.TabIndex = 6;
             this.btn_AddUser.Text = "Add";
             this.btn_AddUser.UseVisualStyleBackColor = true;
+            this.btn_AddUser.Click += new System.EventHandler(this.btn_AddUser_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_GoBack);
+            this.groupBox1.Controls.Add(this.btn_AddUser);
             this.groupBox1.Location = new System.Drawing.Point(106, 101);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 227);
@@ -106,12 +111,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add User";
             // 
+            // btn_GoBack
+            // 
+            this.btn_GoBack.Location = new System.Drawing.Point(184, 158);
+            this.btn_GoBack.Name = "btn_GoBack";
+            this.btn_GoBack.Size = new System.Drawing.Size(80, 31);
+            this.btn_GoBack.TabIndex = 7;
+            this.btn_GoBack.Text = "Go Back";
+            this.btn_GoBack.UseVisualStyleBackColor = true;
+            this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 450);
-            this.Controls.Add(this.btn_AddUser);
             this.Controls.Add(this.txt_AddRepeatPassword);
             this.Controls.Add(this.txt_AddPassword);
             this.Controls.Add(this.txt_AddUsername);
@@ -121,6 +135,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AddUserForm";
             this.Text = "Add User";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +151,6 @@
         private System.Windows.Forms.TextBox txt_AddRepeatPassword;
         private System.Windows.Forms.Button btn_AddUser;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_GoBack;
     }
 }

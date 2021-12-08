@@ -24,5 +24,12 @@ namespace AddressBookApp
             AddUserForm addUserForm = new AddUserForm();
             addUserForm.ShowDialog();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
     }
 }

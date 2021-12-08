@@ -99,20 +99,22 @@
             this.addUserToolStripMenuItem,
             this.viewUserToolStripMenuItem});
             this.userManagementToolStripMenuItem1.Name = "userManagementToolStripMenuItem1";
+            this.userManagementToolStripMenuItem1.ShortcutKeyDisplayString = "";
+            this.userManagementToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
             this.userManagementToolStripMenuItem1.Size = new System.Drawing.Size(155, 24);
             this.userManagementToolStripMenuItem1.Text = "User Management";
             // 
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
             // viewUserToolStripMenuItem
             // 
             this.viewUserToolStripMenuItem.Name = "viewUserToolStripMenuItem";
-            this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.viewUserToolStripMenuItem.Text = "View User";
             // 
             // addressToolStripMenuItem
@@ -121,6 +123,7 @@
             this.addToolStripMenuItem,
             this.viewInformationToolStripMenuItem});
             this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
+            this.addressToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.addressToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.addressToolStripMenuItem.Text = "Contact Managemnt";
             // 
@@ -139,6 +142,7 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
@@ -147,6 +151,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // MainForm
             // 

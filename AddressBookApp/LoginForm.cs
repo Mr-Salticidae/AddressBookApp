@@ -23,8 +23,7 @@ namespace AddressBookApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            connection.Open();
-            connection.Close();
+
         }
 
         private void btn_Login_Click(object sender, EventArgs e)

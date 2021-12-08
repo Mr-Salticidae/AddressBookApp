@@ -1,12 +1,12 @@
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\bin\Debug\AddressBookApp.exe.config
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\bin\Debug\AddressBookApp.exe
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\bin\Debug\AddressBookApp.pdb
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.csprojAssemblyReference.cache
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.AddUserForm.resources
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.LoginForm.resources
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.MainForm.resources
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.Properties.Resources.resources
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.csproj.GenerateResource.cache
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.csproj.CoreCompileInputs.cache
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.exe
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.pdb
-C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.csprojAssemblyReference.cache
-C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.AddUserForm.resources
-C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.LoginForm.resources
-C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.MainForm.resources
