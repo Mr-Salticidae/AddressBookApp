@@ -24,7 +24,36 @@ namespace AddressBookApp
         private void Form1_Load(object sender, EventArgs e)
         {
             connection.Open();
-            checkConnection.Text = "Succeed";
+            connection.Close();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from UserInfo where Username = '" + txt_Username.Text + "' and Password = '" + txt_Password.Text + "'";
+            OleDbDataReader reader = command.ExecuteReader();
+            int count = 0;
+            while (reader.Read())
+            {
+                count++;
+            }
+
+            if (count == 1)
+            {
+                MessageBox.Show("Username and password are correct!");
+            }
+            else if (count > 1)
+            {
+                MessageBox.Show("Duplicate Username and Password!");
+            }
+            else
+            {
+                MessageBox.Show("Username and password are not correct!");
+            }
+
             connection.Close();
         }
     }
