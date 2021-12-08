@@ -43,7 +43,13 @@ namespace AddressBookApp
 
             if (count == 1)
             {
-                MessageBox.Show("Username and password are correct!");
+                MessageBox.Show("Succeed!");
+                connection.Close();
+                connection.Dispose();
+                Hide();
+
+                Form2 f2 = new Form2();
+                f2.ShowDialog();
             }
             else if (count > 1)
             {
