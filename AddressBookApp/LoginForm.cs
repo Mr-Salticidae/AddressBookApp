@@ -21,11 +21,6 @@ namespace AddressBookApp
             connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=./AddressBook.mdb;Persist Security Info=False;";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Login_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -42,7 +37,6 @@ namespace AddressBookApp
 
             if (count == 1)
             {
-                MessageBox.Show("Succeed!");
                 connection.Close();
                 connection.Dispose();
                 Hide();
@@ -60,6 +54,11 @@ namespace AddressBookApp
             }
 
             connection.Close();
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

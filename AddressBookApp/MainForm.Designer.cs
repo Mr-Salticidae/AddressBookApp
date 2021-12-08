@@ -43,8 +43,26 @@
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.officeTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homeTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addressBookDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addressBookDataSet = new AddressBookApp.AddressBookDataSet();
+            this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.UserInfoTableAdapter();
+            this.telephoneInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.TelephoneInfoTableAdapter();
             this.contextMenuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -89,7 +107,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(815, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -108,14 +126,15 @@
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
             this.addUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.addUserToolStripMenuItem.Text = "Add User";
+            this.addUserToolStripMenuItem.Text = "New User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
             // viewUserToolStripMenuItem
             // 
             this.viewUserToolStripMenuItem.Name = "viewUserToolStripMenuItem";
             this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.viewUserToolStripMenuItem.Text = "View User";
+            this.viewUserToolStripMenuItem.Text = "View Users";
+            this.viewUserToolStripMenuItem.Click += new System.EventHandler(this.viewUserToolStripMenuItem_Click);
             // 
             // addressToolStripMenuItem
             // 
@@ -130,11 +149,12 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.addToolStripMenuItem.Text = "Add New Contact";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addToolStripMenuItem.Text = "New Contact";
             // 
             // viewInformationToolStripMenuItem
             // 
+            this.viewInformationToolStripMenuItem.Enabled = false;
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
             this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.viewInformationToolStripMenuItem.Text = "View Contact";
@@ -153,18 +173,116 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personIDDataGridViewTextBoxColumn,
+            this.personNameDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.officeTelDataGridViewTextBoxColumn,
+            this.homeTelDataGridViewTextBoxColumn,
+            this.markDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.telephoneInfoBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(815, 419);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // personIDDataGridViewTextBoxColumn
+            // 
+            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
+            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // personNameDataGridViewTextBoxColumn
+            // 
+            this.personNameDataGridViewTextBoxColumn.DataPropertyName = "PersonName";
+            this.personNameDataGridViewTextBoxColumn.HeaderText = "PersonName";
+            this.personNameDataGridViewTextBoxColumn.Name = "personNameDataGridViewTextBoxColumn";
+            this.personNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sexDataGridViewTextBoxColumn
+            // 
+            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
+            this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
+            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            this.sexDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // officeTelDataGridViewTextBoxColumn
+            // 
+            this.officeTelDataGridViewTextBoxColumn.DataPropertyName = "OfficeTel";
+            this.officeTelDataGridViewTextBoxColumn.HeaderText = "OfficeTel";
+            this.officeTelDataGridViewTextBoxColumn.Name = "officeTelDataGridViewTextBoxColumn";
+            this.officeTelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // homeTelDataGridViewTextBoxColumn
+            // 
+            this.homeTelDataGridViewTextBoxColumn.DataPropertyName = "HomeTel";
+            this.homeTelDataGridViewTextBoxColumn.HeaderText = "HomeTel";
+            this.homeTelDataGridViewTextBoxColumn.Name = "homeTelDataGridViewTextBoxColumn";
+            this.homeTelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // markDataGridViewTextBoxColumn
+            // 
+            this.markDataGridViewTextBoxColumn.DataPropertyName = "Mark";
+            this.markDataGridViewTextBoxColumn.HeaderText = "Mark";
+            this.markDataGridViewTextBoxColumn.Name = "markDataGridViewTextBoxColumn";
+            this.markDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephoneInfoBindingSource
+            // 
+            this.telephoneInfoBindingSource.DataMember = "TelephoneInfo";
+            this.telephoneInfoBindingSource.DataSource = this.addressBookDataSetBindingSource;
+            // 
+            // addressBookDataSetBindingSource
+            // 
+            this.addressBookDataSetBindingSource.DataSource = this.addressBookDataSet;
+            this.addressBookDataSetBindingSource.Position = 0;
+            // 
+            // addressBookDataSet
+            // 
+            this.addressBookDataSet.DataSetName = "AddressBookDataSet";
+            this.addressBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userInfoBindingSource
+            // 
+            this.userInfoBindingSource.DataMember = "UserInfo";
+            this.userInfoBindingSource.DataSource = this.addressBookDataSetBindingSource;
+            // 
+            // userInfoTableAdapter
+            // 
+            this.userInfoTableAdapter.ClearBeforeFill = true;
+            // 
+            // telephoneInfoTableAdapter
+            // 
+            this.telephoneInfoTableAdapter.ClearBeforeFill = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(815, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Main Form";
+            this.Text = "Charles Address Book";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.contextMenuStrip3.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +304,18 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInformationToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource addressBookDataSetBindingSource;
+        private AddressBookDataSet addressBookDataSet;
+        private System.Windows.Forms.BindingSource userInfoBindingSource;
+        private AddressBookDataSetTableAdapters.UserInfoTableAdapter userInfoTableAdapter;
+        private System.Windows.Forms.BindingSource telephoneInfoBindingSource;
+        private AddressBookDataSetTableAdapters.TelephoneInfoTableAdapter telephoneInfoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn officeTelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn homeTelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
     }
 }

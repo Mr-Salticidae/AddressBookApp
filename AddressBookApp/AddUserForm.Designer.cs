@@ -134,7 +134,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddUserForm";
-            this.Text = "Add User";
+            this.Text = "Charles Address Book";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

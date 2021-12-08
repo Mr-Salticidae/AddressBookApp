@@ -10,13 +10,21 @@ using System.Windows.Forms;
 
 namespace AddressBookApp
 {
-    public partial class MainForm : Form
+    public partial class ViewUserForm : Form
     {
-        public MainForm()
+        public ViewUserForm()
         {
             InitializeComponent();
         }
 
+        private void ViewUserForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'addressBookDataSet.UserInfo' table. You can move, or remove it, as needed.
+            this.userInfoTableAdapter.Fill(this.addressBookDataSet.UserInfo);
+            // TODO: This line of code loads data into the 'addressBookDataSet.UserInfo' table. You can move, or remove it, as needed.
+            this.userInfoTableAdapter.Fill(this.addressBookDataSet.UserInfo);
+
+        }
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -32,20 +40,11 @@ namespace AddressBookApp
             loginForm.ShowDialog();
         }
 
-        private void viewUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
-            ViewUserForm viewUserForm = new ViewUserForm();
-            viewUserForm.ShowDialog();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'addressBookDataSet.TelephoneInfo' table. You can move, or remove it, as needed.
-            this.telephoneInfoTableAdapter.Fill(this.addressBookDataSet.TelephoneInfo);
-            // TODO: This line of code loads data into the 'addressBookDataSet.UserInfo' table. You can move, or remove it, as needed.
-            this.userInfoTableAdapter.Fill(this.addressBookDataSet.UserInfo);
-
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
         }
     }
 }

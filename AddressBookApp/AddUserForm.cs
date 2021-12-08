@@ -23,12 +23,13 @@ namespace AddressBookApp
 
         private void btn_AddUser_Click(object sender, EventArgs e)
         {
-            connection.Open();
 
             if (txt_AddUsername.TextLength > 0 && txt_AddPassword.TextLength > 0 && txt_AddRepeatPassword.TextLength > 0)
             {
                 if (txt_AddPassword.Text == txt_AddRepeatPassword.Text)
                 {
+                    connection.Open();
+
                     OleDbCommand checkCommand = new OleDbCommand();
                     checkCommand.Connection = connection;
                     checkCommand.CommandText = "select * from UserInfo where Username = '" + txt_AddUsername.Text + "' and Password = '" + txt_AddPassword.Text + "'";
@@ -38,6 +39,10 @@ namespace AddressBookApp
                     {
                         count++;
                     }
+
+                    connection.Close();
+
+                    connection.Open();
 
                     if (count == 0)
                     {
@@ -51,6 +56,8 @@ namespace AddressBookApp
                     {
                         MessageBox.Show("Username has already existed.");
                     }
+
+                    connection.Close();
                 }
                 else
                 {
@@ -61,10 +68,6 @@ namespace AddressBookApp
             {
                 MessageBox.Show("Please make sure enter all of the information required.");
             }
-
-            
-
-            connection.Close();
         }
 
         private void btn_GoBack_Click(object sender, EventArgs e)
