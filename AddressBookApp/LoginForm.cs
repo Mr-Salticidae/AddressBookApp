@@ -11,11 +11,11 @@ using System.Data.OleDb;
 
 namespace AddressBookApp
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         private OleDbConnection connection = new OleDbConnection();
         
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=./AddressBook.mdb;Persist Security Info=False;";
@@ -48,8 +48,8 @@ namespace AddressBookApp
                 connection.Dispose();
                 Hide();
 
-                Form2 f2 = new Form2();
-                f2.ShowDialog();
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
             }
             else if (count > 1)
             {

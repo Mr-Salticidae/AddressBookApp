@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace AddressBookApp
 {
-    public partial class Form2 : Form
+    public partial class AddUserForm : Form
     {
-        public Form2()
+        public AddUserForm()
         {
             InitializeComponent();
         }
+
     }
 }
