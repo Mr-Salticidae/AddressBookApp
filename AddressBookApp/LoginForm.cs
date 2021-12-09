@@ -35,7 +35,7 @@ namespace AddressBookApp
                 count++;
             }
 
-            if (count == 1)
+            if (count > 0)
             {
                 connection.Close();
                 connection.Dispose();
@@ -43,10 +43,6 @@ namespace AddressBookApp
 
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
-            }
-            else if (count > 1)
-            {
-                MessageBox.Show("Duplicate Username and Password!");
             }
             else
             {

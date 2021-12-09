@@ -33,6 +33,7 @@
             this.userManagementToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,7 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.UserInfoTableAdapter();
-            this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,7 +69,8 @@
             this.userManagementToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addUserToolStripMenuItem,
             this.viewUserToolStripMenuItem,
-            this.resetPasswordToolStripMenuItem});
+            this.resetPasswordToolStripMenuItem,
+            this.deleteUserToolStripMenuItem});
             this.userManagementToolStripMenuItem1.Name = "userManagementToolStripMenuItem1";
             this.userManagementToolStripMenuItem1.ShortcutKeyDisplayString = "";
             this.userManagementToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
@@ -88,6 +90,13 @@
             this.viewUserToolStripMenuItem.Name = "viewUserToolStripMenuItem";
             this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.viewUserToolStripMenuItem.Text = "View Users";
+            // 
+            // resetPasswordToolStripMenuItem
+            // 
+            this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
+            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.resetPasswordToolStripMenuItem.Text = "Reset Password";
+            this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
             // 
             // addressToolStripMenuItem
             // 
@@ -162,12 +171,12 @@
             // 
             this.userInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // resetPasswordToolStripMenuItem
+            // deleteUserToolStripMenuItem
             // 
-            this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
-            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.resetPasswordToolStripMenuItem.Text = "Reset Password";
-            this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
             // 
             // ViewUserForm
             // 
@@ -206,5 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
     }
 }

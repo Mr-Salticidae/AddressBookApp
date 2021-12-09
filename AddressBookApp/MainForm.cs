@@ -61,5 +61,12 @@ namespace AddressBookApp
             ResetPasswordForm resetPasswordForm = new ResetPasswordForm();
             resetPasswordForm.ShowDialog();
         }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            DeleteUserForm deleteUserForm = new DeleteUserForm();
+            deleteUserForm.ShowDialog();
+        }
     }
 }
