@@ -13,3 +13,4 @@ C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookA
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.ViewUserForm.resources
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\bin\Debug\AddressBook.mdb
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.AddContactForm.resources
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.ResetPasswordForm.resources

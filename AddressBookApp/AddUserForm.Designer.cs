@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 142);
+            this.label1.Location = new System.Drawing.Point(70, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 15);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 182);
+            this.label2.Location = new System.Drawing.Point(70, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 1;
@@ -92,9 +92,9 @@
             // 
             // btn_AddUser
             // 
-            this.btn_AddUser.Location = new System.Drawing.Point(61, 158);
+            this.btn_AddUser.Location = new System.Drawing.Point(73, 158);
             this.btn_AddUser.Name = "btn_AddUser";
-            this.btn_AddUser.Size = new System.Drawing.Size(80, 31);
+            this.btn_AddUser.Size = new System.Drawing.Size(68, 31);
             this.btn_AddUser.TabIndex = 6;
             this.btn_AddUser.Text = "Add";
             this.btn_AddUser.UseVisualStyleBackColor = true;
@@ -104,6 +104,8 @@
             // 
             this.groupBox1.Controls.Add(this.btn_GoBack);
             this.groupBox1.Controls.Add(this.btn_AddUser);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(106, 101);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 227);
@@ -113,11 +115,11 @@
             // 
             // btn_GoBack
             // 
-            this.btn_GoBack.Location = new System.Drawing.Point(184, 158);
+            this.btn_GoBack.Location = new System.Drawing.Point(188, 158);
             this.btn_GoBack.Name = "btn_GoBack";
-            this.btn_GoBack.Size = new System.Drawing.Size(80, 31);
+            this.btn_GoBack.Size = new System.Drawing.Size(68, 31);
             this.btn_GoBack.TabIndex = 7;
-            this.btn_GoBack.Text = "Go Back";
+            this.btn_GoBack.Text = "Home";
             this.btn_GoBack.UseVisualStyleBackColor = true;
             this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
             // 
@@ -130,12 +132,11 @@
             this.Controls.Add(this.txt_AddPassword);
             this.Controls.Add(this.txt_AddUsername);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddUserForm";
             this.Text = "Charles Address Book";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

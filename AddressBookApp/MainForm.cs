@@ -54,5 +54,12 @@ namespace AddressBookApp
             AddContactForm addContactForm = new AddContactForm();
             addContactForm.ShowDialog();
         }
+
+        private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            ResetPasswordForm resetPasswordForm = new ResetPasswordForm();
+            resetPasswordForm.ShowDialog();
+        }
     }
 }

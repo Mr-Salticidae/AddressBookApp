@@ -11,28 +11,34 @@ using System.Windows.Forms;
 
 namespace AddressBookApp
 {
-    public partial class AddUserForm : Form
+    public partial class ResetPasswordForm : Form
     {
         private OleDbConnection connection = new OleDbConnection();
 
-        public AddUserForm()
+        public ResetPasswordForm()
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=./AddressBook.mdb;Persist Security Info=False;";
         }
 
-        private void btn_AddUser_Click(object sender, EventArgs e)
+        private void btn_Exit_Click(object sender, EventArgs e)
         {
+            Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
+        }
 
-            if (txt_AddUsername.TextLength > 0 && txt_AddPassword.TextLength > 0 && txt_AddRepeatPassword.TextLength > 0)
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            if (txt_Username.TextLength > 0 && txt_OldPassword.TextLength > 0 && txt_NewPassword.TextLength > 0 && txt_RepeatNewPassword.TextLength > 0)
             {
-                if (txt_AddPassword.Text == txt_AddRepeatPassword.Text)
+                if (txt_NewPassword.Text == txt_RepeatNewPassword.Text)
                 {
                     connection.Open();
 
                     OleDbCommand checkCommand = new OleDbCommand();
                     checkCommand.Connection = connection;
-                    checkCommand.CommandText = "select * from UserInfo where Username = '" + txt_AddUsername.Text + "'";
+                    checkCommand.CommandText = "select * from UserInfo where Username = '" + txt_Username.Text + "' and Password = '" + txt_OldPassword.Text + "'";
                     OleDbDataReader reader = checkCommand.ExecuteReader();
                     int count = 0;
                     while (reader.Read())
@@ -46,35 +52,29 @@ namespace AddressBookApp
 
                     if (count == 0)
                     {
-                        OleDbCommand insertCommand = new OleDbCommand();
-                        insertCommand.Connection = connection;
-                        insertCommand.CommandText = "insert into UserInfo ([Username], [Password]) values ('" + txt_AddUsername.Text + "','" + txt_AddPassword.Text + "')";
-                        insertCommand.ExecuteNonQuery();
-                        MessageBox.Show("Add A New User Successfully!");
+                        MessageBox.Show("Invalid Username or Password.");
                     }
                     else
                     {
-                        MessageBox.Show("The user has already existed.");
+                        OleDbCommand updateCommand = new OleDbCommand();
+                        updateCommand.Connection = connection;
+                        updateCommand.CommandText = "update [UserInfo] set [Password] = '" + txt_NewPassword.Text + "' where Username = '" + txt_Username.Text + "'";
+                        MessageBox.Show(updateCommand.CommandText);
+                        updateCommand.ExecuteNonQuery();
+                        MessageBox.Show("The password has been reset.");
                     }
 
                     connection.Close();
                 }
                 else
                 {
-                    MessageBox.Show("The passwords are not the same.");
+                    MessageBox.Show("The new passwords are not the same.");
                 }
             }
             else
             {
                 MessageBox.Show("Please make sure enter all of the information required.");
             }
-        }
-
-        private void btn_GoBack_Click(object sender, EventArgs e)
-        {
-            Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
         }
     }
 }

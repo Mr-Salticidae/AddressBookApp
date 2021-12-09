@@ -46,5 +46,19 @@ namespace AddressBookApp
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
         }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            AddContactForm addContactForm = new AddContactForm();
+            addContactForm.ShowDialog();
+        }
+
+        private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            ResetPasswordForm resetPasswordForm = new ResetPasswordForm();
+            resetPasswordForm.ShowDialog();
+        }
     }
 }

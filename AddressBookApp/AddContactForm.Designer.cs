@@ -28,120 +28,215 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.userManagementToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.txt_OfficeTel = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_GoBack = new System.Windows.Forms.Button();
+            this.btn_AddUser = new System.Windows.Forms.Button();
+            this.txt_HomeTel = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.combo_Sex = new System.Windows.Forms.ComboBox();
+            this.combo_Mark = new System.Windows.Forms.ComboBox();
+            this.addressBookDataSet = new AddressBookApp.AddressBookDataSet();
+            this.addressBookDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.telephoneInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.telephoneInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.TelephoneInfoTableAdapter();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // txt_OfficeTel
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userManagementToolStripMenuItem1,
-            this.addressToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.txt_OfficeTel.Location = new System.Drawing.Point(169, 117);
+            this.txt_OfficeTel.Name = "txt_OfficeTel";
+            this.txt_OfficeTel.Size = new System.Drawing.Size(129, 25);
+            this.txt_OfficeTel.TabIndex = 13;
             // 
-            // userManagementToolStripMenuItem1
+            // txt_Name
             // 
-            this.userManagementToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addUserToolStripMenuItem,
-            this.viewUserToolStripMenuItem});
-            this.userManagementToolStripMenuItem1.Name = "userManagementToolStripMenuItem1";
-            this.userManagementToolStripMenuItem1.ShortcutKeyDisplayString = "";
-            this.userManagementToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.userManagementToolStripMenuItem1.Size = new System.Drawing.Size(155, 24);
-            this.userManagementToolStripMenuItem1.Text = "User Management";
+            this.txt_Name.Location = new System.Drawing.Point(169, 40);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(129, 25);
+            this.txt_Name.TabIndex = 11;
             // 
-            // addUserToolStripMenuItem
+            // label3
             // 
-            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.addUserToolStripMenuItem.Text = "New User";
-            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 15);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Office Telephone";
             // 
-            // viewUserToolStripMenuItem
+            // label2
             // 
-            this.viewUserToolStripMenuItem.Name = "viewUserToolStripMenuItem";
-            this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.viewUserToolStripMenuItem.Text = "View Users";
-            this.viewUserToolStripMenuItem.Click += new System.EventHandler(this.viewUserToolStripMenuItem_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(84, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Sex";
             // 
-            // addressToolStripMenuItem
+            // label1
             // 
-            this.addressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.viewInformationToolStripMenuItem});
-            this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
-            this.addressToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.addressToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
-            this.addressToolStripMenuItem.Text = "Contact Managemnt";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(84, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Name";
             // 
-            // addToolStripMenuItem
+            // groupBox1
             // 
-            this.addToolStripMenuItem.Enabled = false;
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.addToolStripMenuItem.Text = "New Contact";
+            this.groupBox1.Controls.Add(this.combo_Mark);
+            this.groupBox1.Controls.Add(this.combo_Sex);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txt_HomeTel);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txt_OfficeTel);
+            this.groupBox1.Controls.Add(this.btn_GoBack);
+            this.groupBox1.Controls.Add(this.btn_AddUser);
+            this.groupBox1.Controls.Add(this.txt_Name);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(98, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(330, 313);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add Contact";
             // 
-            // viewInformationToolStripMenuItem
+            // btn_GoBack
             // 
-            this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.viewInformationToolStripMenuItem.Text = "View Contact";
-            this.viewInformationToolStripMenuItem.Click += new System.EventHandler(this.viewInformationToolStripMenuItem_Click);
+            this.btn_GoBack.Location = new System.Drawing.Point(198, 242);
+            this.btn_GoBack.Name = "btn_GoBack";
+            this.btn_GoBack.Size = new System.Drawing.Size(80, 31);
+            this.btn_GoBack.TabIndex = 18;
+            this.btn_GoBack.Text = "Home";
+            this.btn_GoBack.UseVisualStyleBackColor = true;
+            this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
             // 
-            // helpToolStripMenuItem
+            // btn_AddUser
             // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.btn_AddUser.Location = new System.Drawing.Point(61, 242);
+            this.btn_AddUser.Name = "btn_AddUser";
+            this.btn_AddUser.Size = new System.Drawing.Size(80, 31);
+            this.btn_AddUser.TabIndex = 17;
+            this.btn_AddUser.Text = "Add";
+            this.btn_AddUser.UseVisualStyleBackColor = true;
+            this.btn_AddUser.Click += new System.EventHandler(this.btn_AddUser_Click);
             // 
-            // exitToolStripMenuItem
+            // txt_HomeTel
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.txt_HomeTel.Location = new System.Drawing.Point(169, 158);
+            this.txt_HomeTel.Name = "txt_HomeTel";
+            this.txt_HomeTel.Size = new System.Drawing.Size(129, 25);
+            this.txt_HomeTel.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(44, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Home Telephone";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(84, 202);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Mark";
+            // 
+            // combo_Sex
+            // 
+            this.combo_Sex.FormattingEnabled = true;
+            this.combo_Sex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.combo_Sex.Location = new System.Drawing.Point(169, 80);
+            this.combo_Sex.Name = "combo_Sex";
+            this.combo_Sex.Size = new System.Drawing.Size(129, 23);
+            this.combo_Sex.TabIndex = 12;
+            // 
+            // combo_Mark
+            // 
+            this.combo_Mark.FormattingEnabled = true;
+            this.combo_Mark.Items.AddRange(new object[] {
+            "Family",
+            "Friends",
+            "Classmates",
+            "Workmates"});
+            this.combo_Mark.Location = new System.Drawing.Point(169, 199);
+            this.combo_Mark.Name = "combo_Mark";
+            this.combo_Mark.Size = new System.Drawing.Size(129, 23);
+            this.combo_Mark.TabIndex = 16;
+            // 
+            // addressBookDataSet
+            // 
+            this.addressBookDataSet.DataSetName = "AddressBookDataSet";
+            this.addressBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // addressBookDataSetBindingSource
+            // 
+            this.addressBookDataSetBindingSource.DataSource = this.addressBookDataSet;
+            this.addressBookDataSetBindingSource.Position = 0;
+            // 
+            // telephoneInfoBindingSource
+            // 
+            this.telephoneInfoBindingSource.DataMember = "TelephoneInfo";
+            this.telephoneInfoBindingSource.DataSource = this.addressBookDataSetBindingSource;
+            // 
+            // telephoneInfoTableAdapter
+            // 
+            this.telephoneInfoTableAdapter.ClearBeforeFill = true;
             // 
             // AddContactForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(545, 450);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AddContactForm";
             this.Text = "Add Contact";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.AddContactForm_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem userManagementToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addressToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.TextBox txt_OfficeTel;
+        private System.Windows.Forms.TextBox txt_Name;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_HomeTel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_GoBack;
+        private System.Windows.Forms.Button btn_AddUser;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox combo_Mark;
+        private System.Windows.Forms.ComboBox combo_Sex;
+        private System.Windows.Forms.BindingSource addressBookDataSetBindingSource;
+        private AddressBookDataSet addressBookDataSet;
+        private System.Windows.Forms.BindingSource telephoneInfoBindingSource;
+        private AddressBookDataSetTableAdapters.TelephoneInfoTableAdapter telephoneInfoTableAdapter;
     }
 }
