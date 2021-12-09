@@ -125,14 +125,14 @@
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.addUserToolStripMenuItem.Text = "New User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
             // viewUserToolStripMenuItem
             // 
             this.viewUserToolStripMenuItem.Name = "viewUserToolStripMenuItem";
-            this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.viewUserToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.viewUserToolStripMenuItem.Text = "View Users";
             this.viewUserToolStripMenuItem.Click += new System.EventHandler(this.viewUserToolStripMenuItem_Click);
             // 
@@ -151,12 +151,13 @@
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.addToolStripMenuItem.Text = "New Contact";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewInformationToolStripMenuItem
             // 
             this.viewInformationToolStripMenuItem.Enabled = false;
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.viewInformationToolStripMenuItem.Text = "View Contact";
             // 
             // helpToolStripMenuItem

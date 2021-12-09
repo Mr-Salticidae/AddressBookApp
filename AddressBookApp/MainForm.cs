@@ -47,5 +47,12 @@ namespace AddressBookApp
             this.userInfoTableAdapter.Fill(this.addressBookDataSet.UserInfo);
 
         }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            AddContactForm addContactForm = new AddContactForm();
+            addContactForm.ShowDialog();
+        }
     }
 }
