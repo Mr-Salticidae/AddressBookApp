@@ -63,6 +63,12 @@
     <Compile Include="DeleteUserForm.Designer.cs">
       <DependentUpon>DeleteUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditContactForm.Designer.cs">
+      <DependentUpon>EditContactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteUserForm.resx">
       <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditContactForm.resx">
+      <DependentUpon>EditContactForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

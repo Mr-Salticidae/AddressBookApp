@@ -39,6 +39,7 @@
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,8 @@
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.UserInfoTableAdapter();
             this.telephoneInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.TelephoneInfoTableAdapter();
-            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -145,11 +147,20 @@
             this.resetPasswordToolStripMenuItem.Text = "Reset Password";
             this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
             // 
+            // deleteUserToolStripMenuItem
+            // 
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
             // addressToolStripMenuItem
             // 
             this.addressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.viewInformationToolStripMenuItem});
+            this.viewInformationToolStripMenuItem,
+            this.editContactToolStripMenuItem,
+            this.deleteContactToolStripMenuItem});
             this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
             this.addressToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.addressToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
@@ -158,7 +169,7 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.addToolStripMenuItem.Text = "New Contact";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -166,7 +177,7 @@
             // 
             this.viewInformationToolStripMenuItem.Enabled = false;
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.viewInformationToolStripMenuItem.Text = "View Contact";
             // 
             // exitToolStripMenuItem
@@ -180,6 +191,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -267,12 +279,18 @@
             // 
             this.telephoneInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // deleteUserToolStripMenuItem
+            // editContactToolStripMenuItem
             // 
-            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.deleteUserToolStripMenuItem.Text = "Delete User";
-            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
+            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.editContactToolStripMenuItem.Text = "Edit Contact";
+            this.editContactToolStripMenuItem.Click += new System.EventHandler(this.editContactToolStripMenuItem_Click);
+            // 
+            // deleteContactToolStripMenuItem
+            // 
+            this.deleteContactToolStripMenuItem.Name = "deleteContactToolStripMenuItem";
+            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.deleteContactToolStripMenuItem.Text = "Delete Contact";
             // 
             // MainForm
             // 
@@ -328,5 +346,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editContactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteContactToolStripMenuItem;
     }
 }

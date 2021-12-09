@@ -68,5 +68,11 @@ namespace AddressBookApp
             DeleteUserForm deleteUserForm = new DeleteUserForm();
             deleteUserForm.ShowDialog();
         }
+
+        private void editContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditContactForm editContactForm = new EditContactForm();
+            editContactForm.ShowDialog();
+        }
     }
 }
