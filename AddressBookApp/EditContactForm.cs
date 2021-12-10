@@ -34,7 +34,7 @@ namespace AddressBookApp
 
                 OleDbCommand checkCommand = new OleDbCommand();
                 checkCommand.Connection = connection;
-                checkCommand.CommandText = "select * from TelephoneInfo where PersonName = '" + txt_Name + "'";
+                checkCommand.CommandText = "select * from TelephoneInfo where PersonName = '" + txt_Name.Text + "'";
                 OleDbDataReader reader = checkCommand.ExecuteReader();
                 int count = 0;
                 while (reader.Read())
@@ -63,11 +63,25 @@ namespace AddressBookApp
                     {
                         OleDbCommand insertCommand = new OleDbCommand();
                         insertCommand.Connection = connection;
-                        insertCommand.CommandText = "update TelephoneInfo set [Sex] = '" + txt_OfficeTel.Text + "' where PersonName = '" + txt_Name.Text + "'";
+                        insertCommand.CommandText = "update TelephoneInfo set [OfficeTel] = '" + txt_OfficeTel.Text + "' where PersonName = '" + txt_Name.Text + "'";
+                        insertCommand.ExecuteNonQuery();
+                    }
+                    if (txt_HomeTel.Text.Length > 0)
+                    {
+                        OleDbCommand insertCommand = new OleDbCommand();
+                        insertCommand.Connection = connection;
+                        insertCommand.CommandText = "update TelephoneInfo set [HomeTel] = '" + txt_HomeTel.Text + "' where PersonName = '" + txt_Name.Text + "'";
+                        insertCommand.ExecuteNonQuery();
+                    }
+                    if (combo_Mark.Text.Length > 0)
+                    {
+                        OleDbCommand insertCommand = new OleDbCommand();
+                        insertCommand.Connection = connection;
+                        insertCommand.CommandText = "update TelephoneInfo set [Mark] = '" + combo_Mark.Text + "' where PersonName = '" + txt_Name.Text + "'";
                         insertCommand.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("");
+                    MessageBox.Show("Edit Contact Success");
                 }
 
                 connection.Close();

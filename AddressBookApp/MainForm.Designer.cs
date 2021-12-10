@@ -43,6 +43,9 @@
             this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +60,6 @@
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.UserInfoTableAdapter();
             this.telephoneInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.TelephoneInfoTableAdapter();
-            this.editContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -106,6 +107,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userManagementToolStripMenuItem1,
             this.addressToolStripMenuItem,
+            this.refreshToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -123,8 +125,8 @@
             this.userManagementToolStripMenuItem1.Name = "userManagementToolStripMenuItem1";
             this.userManagementToolStripMenuItem1.ShortcutKeyDisplayString = "";
             this.userManagementToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.userManagementToolStripMenuItem1.Size = new System.Drawing.Size(155, 24);
-            this.userManagementToolStripMenuItem1.Text = "User Management";
+            this.userManagementToolStripMenuItem1.Size = new System.Drawing.Size(216, 24);
+            this.userManagementToolStripMenuItem1.Text = "User Management (Alt +U)";
             // 
             // addUserToolStripMenuItem
             // 
@@ -163,8 +165,8 @@
             this.deleteContactToolStripMenuItem});
             this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
             this.addressToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.addressToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
-            this.addressToolStripMenuItem.Text = "Contact Managemnt";
+            this.addressToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
+            this.addressToolStripMenuItem.Text = "Contact Managemnt (Alt + C)";
             // 
             // addToolStripMenuItem
             // 
@@ -179,6 +181,27 @@
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
             this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.viewInformationToolStripMenuItem.Text = "View Contact";
+            // 
+            // editContactToolStripMenuItem
+            // 
+            this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
+            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.editContactToolStripMenuItem.Text = "Edit Contact";
+            this.editContactToolStripMenuItem.Click += new System.EventHandler(this.editContactToolStripMenuItem_Click);
+            // 
+            // deleteContactToolStripMenuItem
+            // 
+            this.deleteContactToolStripMenuItem.Name = "deleteContactToolStripMenuItem";
+            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.deleteContactToolStripMenuItem.Text = "Delete Contact";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh (F5)";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -279,19 +302,6 @@
             // 
             this.telephoneInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // editContactToolStripMenuItem
-            // 
-            this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
-            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.editContactToolStripMenuItem.Text = "Edit Contact";
-            this.editContactToolStripMenuItem.Click += new System.EventHandler(this.editContactToolStripMenuItem_Click);
-            // 
-            // deleteContactToolStripMenuItem
-            // 
-            this.deleteContactToolStripMenuItem.Name = "deleteContactToolStripMenuItem";
-            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.deleteContactToolStripMenuItem.Text = "Delete Contact";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -348,5 +358,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editContactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteContactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

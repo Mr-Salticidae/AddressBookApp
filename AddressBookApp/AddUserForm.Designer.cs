@@ -119,7 +119,7 @@
             this.btn_GoBack.Name = "btn_GoBack";
             this.btn_GoBack.Size = new System.Drawing.Size(68, 31);
             this.btn_GoBack.TabIndex = 7;
-            this.btn_GoBack.Text = "Home";
+            this.btn_GoBack.Text = "OK";
             this.btn_GoBack.UseVisualStyleBackColor = true;
             this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
             // 

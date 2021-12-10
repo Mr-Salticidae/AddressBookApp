@@ -67,5 +67,10 @@ namespace AddressBookApp
             DeleteUserForm deleteUserForm = new DeleteUserForm();
             deleteUserForm.ShowDialog();
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
     }
 }

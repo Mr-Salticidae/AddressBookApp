@@ -20,7 +20,6 @@ namespace AddressBookApp
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
             AddUserForm addUserForm = new AddUserForm();
             addUserForm.ShowDialog();
         }
@@ -50,7 +49,6 @@ namespace AddressBookApp
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
             AddContactForm addContactForm = new AddContactForm();
             addContactForm.ShowDialog();
         }
@@ -64,7 +62,6 @@ namespace AddressBookApp
 
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
             DeleteUserForm deleteUserForm = new DeleteUserForm();
             deleteUserForm.ShowDialog();
         }
@@ -73,6 +70,11 @@ namespace AddressBookApp
         {
             EditContactForm editContactForm = new EditContactForm();
             editContactForm.ShowDialog();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }

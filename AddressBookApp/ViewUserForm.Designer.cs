@@ -34,6 +34,7 @@
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,7 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userInfoTableAdapter = new AddressBookApp.AddressBookDataSetTableAdapters.UserInfoTableAdapter();
-            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addressBookDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,10 +58,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userManagementToolStripMenuItem1,
             this.addressToolStripMenuItem,
+            this.refreshToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(488, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(657, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,8 +76,8 @@
             this.userManagementToolStripMenuItem1.Name = "userManagementToolStripMenuItem1";
             this.userManagementToolStripMenuItem1.ShortcutKeyDisplayString = "";
             this.userManagementToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.userManagementToolStripMenuItem1.Size = new System.Drawing.Size(155, 24);
-            this.userManagementToolStripMenuItem1.Text = "User Management";
+            this.userManagementToolStripMenuItem1.Size = new System.Drawing.Size(220, 24);
+            this.userManagementToolStripMenuItem1.Text = "User Management (Alt + U)";
             // 
             // addUserToolStripMenuItem
             // 
@@ -98,6 +100,13 @@
             this.resetPasswordToolStripMenuItem.Text = "Reset Password";
             this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
             // 
+            // deleteUserToolStripMenuItem
+            // 
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
             // addressToolStripMenuItem
             // 
             this.addressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,20 +114,20 @@
             this.viewInformationToolStripMenuItem});
             this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
             this.addressToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.addressToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
-            this.addressToolStripMenuItem.Text = "Contact Managemnt";
+            this.addressToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
+            this.addressToolStripMenuItem.Text = "Contact Managemnt (Alt + C)";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.addToolStripMenuItem.Text = "Add New Contact";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewInformationToolStripMenuItem
             // 
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.viewInformationToolStripMenuItem.Text = "View Contact";
             this.viewInformationToolStripMenuItem.Click += new System.EventHandler(this.viewInformationToolStripMenuItem_Click);
             // 
@@ -147,7 +156,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(488, 421);
+            this.dataGridView1.Size = new System.Drawing.Size(657, 421);
             this.dataGridView1.TabIndex = 6;
             // 
             // userIDDataGridViewTextBoxColumn
@@ -171,18 +180,18 @@
             // 
             this.userInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // deleteUserToolStripMenuItem
+            // refreshToolStripMenuItem
             // 
-            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.deleteUserToolStripMenuItem.Text = "Delete User";
-            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.refreshToolStripMenuItem.Text = "Refresh (F5)";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // ViewUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 450);
+            this.ClientSize = new System.Drawing.Size(657, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ViewUserForm";
@@ -216,5 +225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

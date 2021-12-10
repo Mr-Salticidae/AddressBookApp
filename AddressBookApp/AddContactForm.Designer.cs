@@ -35,13 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_GoBack = new System.Windows.Forms.Button();
-            this.btn_AddUser = new System.Windows.Forms.Button();
+            this.combo_Mark = new System.Windows.Forms.ComboBox();
+            this.combo_Sex = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txt_HomeTel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.combo_Sex = new System.Windows.Forms.ComboBox();
-            this.combo_Mark = new System.Windows.Forms.ComboBox();
+            this.btn_GoBack = new System.Windows.Forms.Button();
+            this.btn_AddUser = new System.Windows.Forms.Button();
             this.addressBookDataSet = new AddressBookApp.AddressBookDataSet();
             this.addressBookDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.telephoneInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -114,25 +114,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Contact";
             // 
-            // btn_GoBack
+            // combo_Mark
             // 
-            this.btn_GoBack.Location = new System.Drawing.Point(198, 242);
-            this.btn_GoBack.Name = "btn_GoBack";
-            this.btn_GoBack.Size = new System.Drawing.Size(80, 31);
-            this.btn_GoBack.TabIndex = 18;
-            this.btn_GoBack.Text = "Home";
-            this.btn_GoBack.UseVisualStyleBackColor = true;
-            this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
+            this.combo_Mark.FormattingEnabled = true;
+            this.combo_Mark.Items.AddRange(new object[] {
+            "Family",
+            "Friends",
+            "Classmates",
+            "Workmates"});
+            this.combo_Mark.Location = new System.Drawing.Point(169, 199);
+            this.combo_Mark.Name = "combo_Mark";
+            this.combo_Mark.Size = new System.Drawing.Size(129, 23);
+            this.combo_Mark.TabIndex = 16;
             // 
-            // btn_AddUser
+            // combo_Sex
             // 
-            this.btn_AddUser.Location = new System.Drawing.Point(61, 242);
-            this.btn_AddUser.Name = "btn_AddUser";
-            this.btn_AddUser.Size = new System.Drawing.Size(80, 31);
-            this.btn_AddUser.TabIndex = 17;
-            this.btn_AddUser.Text = "Add";
-            this.btn_AddUser.UseVisualStyleBackColor = true;
-            this.btn_AddUser.Click += new System.EventHandler(this.btn_AddUser_Click);
+            this.combo_Sex.FormattingEnabled = true;
+            this.combo_Sex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.combo_Sex.Location = new System.Drawing.Point(169, 80);
+            this.combo_Sex.Name = "combo_Sex";
+            this.combo_Sex.Size = new System.Drawing.Size(129, 23);
+            this.combo_Sex.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(84, 202);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Mark";
             // 
             // txt_HomeTel
             // 
@@ -150,38 +163,25 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Home Telephone";
             // 
-            // label5
+            // btn_GoBack
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(84, 202);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Mark";
+            this.btn_GoBack.Location = new System.Drawing.Point(198, 242);
+            this.btn_GoBack.Name = "btn_GoBack";
+            this.btn_GoBack.Size = new System.Drawing.Size(80, 31);
+            this.btn_GoBack.TabIndex = 18;
+            this.btn_GoBack.Text = "OK";
+            this.btn_GoBack.UseVisualStyleBackColor = true;
+            this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
             // 
-            // combo_Sex
+            // btn_AddUser
             // 
-            this.combo_Sex.FormattingEnabled = true;
-            this.combo_Sex.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.combo_Sex.Location = new System.Drawing.Point(169, 80);
-            this.combo_Sex.Name = "combo_Sex";
-            this.combo_Sex.Size = new System.Drawing.Size(129, 23);
-            this.combo_Sex.TabIndex = 12;
-            // 
-            // combo_Mark
-            // 
-            this.combo_Mark.FormattingEnabled = true;
-            this.combo_Mark.Items.AddRange(new object[] {
-            "Family",
-            "Friends",
-            "Classmates",
-            "Workmates"});
-            this.combo_Mark.Location = new System.Drawing.Point(169, 199);
-            this.combo_Mark.Name = "combo_Mark";
-            this.combo_Mark.Size = new System.Drawing.Size(129, 23);
-            this.combo_Mark.TabIndex = 16;
+            this.btn_AddUser.Location = new System.Drawing.Point(61, 242);
+            this.btn_AddUser.Name = "btn_AddUser";
+            this.btn_AddUser.Size = new System.Drawing.Size(80, 31);
+            this.btn_AddUser.TabIndex = 17;
+            this.btn_AddUser.Text = "Add";
+            this.btn_AddUser.UseVisualStyleBackColor = true;
+            this.btn_AddUser.Click += new System.EventHandler(this.btn_AddUser_Click);
             // 
             // addressBookDataSet
             // 
