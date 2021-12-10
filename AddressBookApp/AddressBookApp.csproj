@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddressBookDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DeleteContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteContactForm.Designer.cs">
+      <DependentUpon>DeleteContactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteContactForm.resx">
+      <DependentUpon>DeleteContactForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteUserForm.resx">
       <DependentUpon>DeleteUserForm.cs</DependentUpon>

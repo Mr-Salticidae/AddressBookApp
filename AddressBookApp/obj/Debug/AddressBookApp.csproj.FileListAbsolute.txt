@@ -16,3 +16,4 @@ C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookA
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.ResetPasswordForm.resources
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.DeleteUserForm.resources
 C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.EditContactForm.resources
+C:\VS Workspace\C# learning\AddressBookApp\AddressBookApp\obj\Debug\AddressBookApp.DeleteContactForm.resources
